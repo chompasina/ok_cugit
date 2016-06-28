@@ -5,8 +5,8 @@ require './lib/okcugit'
 class FinderTest < Minitest::Test
 
   def test_that_finder_exists_with_repo_name
-    repo = OkCuGit::Finder.new("challenges")
-
+    repo = OkCuGit::Finder.new("turingschool/challenges")
+    
     assert_equal "challenges", repo.repo_name
   end
 

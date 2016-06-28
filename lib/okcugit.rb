@@ -37,8 +37,10 @@ module OkCuGit
   end
 end
 
-user_and_repo = ARGV[0]
-finder = OkCuGit::Finder.new(user_and_repo)
-finder.clone_repo
-puts finder.all_contributors
-finder.clean_up
+if __FILE__ == $0
+  user_and_repo = ARGV[0]
+  finder = OkCuGit::Finder.new(user_and_repo)
+  finder.clone_repo
+  puts finder.all_contributors
+  finder.clean_up
+end
